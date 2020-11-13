@@ -9,7 +9,7 @@
     }
 
     .point-gmcq-item label {
-        background-color:@item-text-color;
+        background-color:@item-color-inverted;
         display:block;
         position: relative;
         z-index: 1;
@@ -25,8 +25,8 @@
         }
 
         &.selected {
-            color: @item-selected-color;
-            background-color:@item-text-selected-color;
+            color: @item-color;
+            background-color:@item-color-inverted;
             .point-gmcq-answer-icon{
                 &:before {
                     content: "\e65d";
@@ -35,7 +35,7 @@
         }
 
         &.point-gmcq-validation-error {
-            outline: 2px solid @validation-error-border-color;
+            outline: 2px solid @validation-error;
         }
     }
 
@@ -51,12 +51,12 @@
     }
 
     .point-gmcq-correct-icon {
-        color: @icon-correct-color;
+        color: @item-color;
         display: none;
     }
 
     .point-gmcq-incorrect-icon {
-        color: @icon-incorrect-color;
+        color: @item-color;
         display: none;
     }
 
@@ -99,18 +99,18 @@
 
         &.disabled {
             .point-gmcq-item label.selected.disabled {
-                background-color:@item-selected-color;
+                background-color:@item-color;
             }
             .point-gmcq-item label.disabled {
-                background-color:@item-disabled-color;
+                background-color:@disabled;
             }
 
             .point-gmcq-item.correct .selected .state {
-                color:@icon-correct-color;
+                color:@item-color;
             }
 
             .point-gmcq-item.incorrect .selected .state {
-                color:@icon-incorrect-color;
+                color:@item-color;
             }
         }
     }
@@ -123,15 +123,15 @@
         .point-gmcq-widget {
             &:not(.disabled) {
                 .point-gmcq-item label:hover {
-                    color:@item-text-hover-color;
-                    background-color:@item-hover-color;
+                    color:@item-color-inverted-hover;
+                    background-color:@item-color-hover;
                 }
                 .point-gmcq-item label.disabled {
 
-                    background-color:@item-disabled-color;
+                    background-color:@disabled;
                     cursor:default;
                     &:hover{
-                        background: @item-disabled-color;
+                        background: @disabled;
                     }
                 }
             }
